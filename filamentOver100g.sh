@@ -4,7 +4,7 @@
 #Second arg is an optional date in the format YYYY-MM-DD. Leading zeros are required. If used, this will only take into account prints AFTER the given date
 if [[ -z "$1" ]];
 then
-	printf "\n$(tput setab 196) File name of the CSV is missing! $(tput sgr0)\n"
+	printf "\n$(tput setab 196)File name of the CSV is missing!$(tput sgr0)\n"
 	exit 1
 fi
 date=${2:-'2022-08-01'}
