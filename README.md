@@ -10,5 +10,5 @@ If you have anything to add or issues to bring up, please either create and issu
 # TODO
 - [x] Overall filament usage of each person
 - [x] Filament usage over 100g after a specific date
-- [] Usage plotting
-- [] Get usage of a specific person
+- [ ] Usage plotting
+- [ ] Get usage of a specific person
