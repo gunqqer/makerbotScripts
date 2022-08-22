@@ -7,7 +7,7 @@ then
 	printf "\n$(tput setab 196)File name of the CSV is missing!$(tput sgr0)\n"
 	exit 1
 fi
-if [[ $var = *" "* ]];
+if [[ $1 = *" "* ]];
 then
 	printf "\n$(tput setab 196)File name of the CSV contains a space! Please rename the file and try again$(tput sgr0)\n"
 	exit 1
