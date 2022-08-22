@@ -9,7 +9,7 @@ then
 fi
 if [[ $1 = *" "* ]];
 then
-	printf "\n$(tput setab 196)File name of the CSV contains a space! Please rename the file and try again$(tput sgr0)\n"
+	printf "$(tput setab 196)File name of the CSV contains a space! Please rename the file and try again$(tput sgr0)\n"
 	exit 1
 fi
 date=${2:-'2022-08-01'}
