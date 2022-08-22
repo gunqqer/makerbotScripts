@@ -7,6 +7,11 @@ then
 	printf "\n$(tput setab 196)File name of the CSV is missing!$(tput sgr0)\n"
 	exit 1
 fi
+if [[ $var = *" "* ]];
+then
+	printf "\n$(tput setab 196)File name of the CSV contains a space! Please rename the file and try again$(tput sgr0)\n"
+	exit 1
+fi
 date=${2:-'2022-08-01'}
 
 q -H -d, "SELECT \"Submitted By\", SUM(\"Total Estimated Material Usage\") FROM $1 WHERE \"Print Job Status\" = 'completed' AND datetime(\"Time Submitted\") > datetime('$date') GROUP BY \"Submitted By\" HAVING SUM(\"Total Estimated Material Usage\") > 100 ORDER BY \"Total Estimated Material Usage\""
